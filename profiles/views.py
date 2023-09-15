@@ -159,7 +159,7 @@ class RegisterAccountantViewSet(GenericAPIView):
 
 class AccountantViewSet(ModelViewSet):
     serializer_class = UpdateAccountantSerializer
-    permission_classes = [IsAdminUser]
+    permission_classes = [IsAccountant]
 
     @action(methods=['DELETE', 'GET'], permission_classes=[IsAccountant], detail=False)
     def me(self, reqeust):
